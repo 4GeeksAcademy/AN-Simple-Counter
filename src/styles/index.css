@@ -1,61 +1,84 @@
 :root {
-    --Human: "Arial", sans-serif;
-  }
-  @font-face {
-    font-family: "Fuente-SW-Aurebesh";
-    font-weight: normal;
-    font-style: normal;
-  }
-  .timer{
-    background-image:  repeating-radial-gradient(circle at 0 0, transparent 0, #55b67c 38px), repeating-linear-gradient(#1f1fd0, #ff003d);
-    background-color: #55b67c;
-    margin-top: 5rem;
-    border-radius: 2%;
-  }
-  .text{
-    margin: 2rem;
-    font-size: 5rem;
-  }
-  body {
-    font-family: "Fuente-SW-Aurebesh", sans-serif;
-    vertical-align: bottom;
-    font-size: 2rem;
-  }
-  .crono {
-    size: 2rem;
-  }
-  .tot {
-    font-size: 4rem;
-  }
-  .num {
-    font-size: 8rem;
-  }
-  head {
-    font-family: "Fuente-SW-Aurebesh", sans-serif;
-  }
-  
-  .humanLang {
-    font-family: var(--Human);
-  }
-  
-  /* .digito {
-    display: inline-block;
-    padding: 10px;
-    margin-right: 10px;
-    border-radius: 55%;
-    background-color: #ffffff;
-    color: #000000;
-    font-size: 30px;
-    text-align: center;
-    width: 50px;
-    height: 60px;
-    line-height: 35px;
-    transition: transform 0.2s ease-in-out, box-shadow 0.3s ease-in-out;
-    cursor: pointer;
-  } */
-  
-  input[type="number"]::-webkit-inner-spin-button,
-  input[type="number"]::-webkit-outer-spin-button {
-    -webkit-appearance: none;
-    margin: 0;
-  }
+  --font-human: "Arial", sans-serif;
+  --font-aurebesh: "Fuente-SW-Aurebesh", sans-serif;
+  --background-color: #020108;
+  --digit-color: #ffffff;
+  --text-color: #000000;
+  --highlight-color: #9bd01f49;
+  --font-size-large: 5rem;
+  --font-size-medium: 4rem;
+  --font-size-small: 2rem;
+}
+
+@font-face {
+  font-family: "Fuente-SW-Aurebesh";
+  font-weight: normal;
+  font-style: normal;
+}
+
+body {
+  font-family: var(--font-aurebesh);
+  font-size: var(--font-size-small);
+  vertical-align: bottom;
+}
+
+.timer {
+  background-color: var(--background-color);
+  margin-top: 5rem;
+  border-radius: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 1rem;
+}
+
+.text {
+  margin: 2rem;
+  font-size: var(--font-size-large);
+}
+
+.crono {
+  width: 50px;
+  height: 50px;
+}
+
+.tot {
+  font-size: var(--font-size-medium);
+}
+
+.num {
+  font-size: 8rem;
+}
+
+.regresiva {
+  display: flex;
+  padding: 10px;
+  margin-right: 10px;
+  border-radius: 55%;
+  background-color: var(--digit-color);
+  color: var(--text-color);
+  font-size: 15vh;
+  width: 50px;
+  height: 60px;
+  line-height: 35px;
+  transition: transform 0.2s ease-in-out, box-shadow 0.3s ease-in-out;
+  cursor: pointer;
+  margin-top: 5%;
+  justify-content: center;  
+  align-items: center;
+}
+
+.digit {
+  transform: translate(-250px, 200px);
+}
+
+.cuenta {
+  display: flex;
+  align-self: center;
+  align-items: center;
+  justify-content: center;
+}
+
+.far {
+  color: var(--highlight-color);
+}

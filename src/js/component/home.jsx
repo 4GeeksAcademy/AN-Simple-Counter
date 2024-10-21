@@ -1,12 +1,13 @@
 import React from "react";
 import ContadorTotal from "./ContadorTotal.jsx";
-import SimpleCounter from "./SimpleCounter.jsx";
+import Contadorextra from "./contadorextra.jsx";
 
 //create your first component
 const Home = () => {
   return (
     <>
       <ContadorTotal />
+      <Contadorextra />
     </>
   );
 };
